@@ -34,7 +34,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 #### PATH
-export PATH="$(/usr/local/bin/brew --prefix)/bin:/usr/local/sbin:$PATH"
+export PATH="$(brew --prefix)/sbin:$PATH"
 
 if [ -d $HOME/.composer/vendor/bin ]
 then
