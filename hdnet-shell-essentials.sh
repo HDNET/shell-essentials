@@ -27,6 +27,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 #### load inputrc
 bind -f $(brew --prefix)/etc/bash/hdnet-inputrc
 
+#### load prompt
+source $(brew --prefix)/etc/bash/hdnet-prompt
+
 #### Aliase
 alias nano="nano -w"
 alias sf-up="git-up && composer install && app/console assetic:dump && app/console cache:clear && app/console doctrine:schema:update --force"
