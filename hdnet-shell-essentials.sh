@@ -1,5 +1,7 @@
 # HDNET Shell Essentials
 
+BREWPREFIX="$(brew --prefix)"
+
 #### Completion
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -22,13 +24,13 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
-[ -f $(brew --prefix)/etc/bash_completion ] && source $(brew --prefix)/etc/bash_completion
+[ -f ${BREWPREFIX}/etc/bash_completion ] && source ${BREWPREFIX}/etc/bash_completion
 
 #### load inputrc
-bind -f $(brew --prefix)/etc/bash/hdnet-inputrc
+bind -f ${BREWPREFIX}/etc/bash/hdnet-inputrc
 
 #### load prompt
-source $(brew --prefix)/etc/bash/hdnet-prompt
+source ${BREWPREFIX}/etc/bash/hdnet-prompt
 
 #### Aliase
 alias nano="nano -w"
@@ -40,7 +42,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 #### PATH
-export PATH="$(brew --prefix)/sbin:$PATH"
+export PATH="${BREWPREFIX}/sbin:$PATH"
 
 if [ -d $HOME/.composer/vendor/bin ]
 then
