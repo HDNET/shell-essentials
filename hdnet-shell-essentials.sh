@@ -68,6 +68,10 @@ export MANPAGER="less -X"
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"
 
+# Always enable colored `ls` output
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
 #### Functions
 # Create a new directory and enter it
 function mkd() {
